@@ -3,17 +3,18 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Noi Te Acoperim - Servicii Complete Acoperișuri București",
+  title: "TOP Acoperis - Servicii Complete Acoperișuri București",
   description:
     "Servicii profesionale de montaj și reparații acoperișuri, hidroizolații, dulgherie. Disponibili 24/7 pentru urgențe. Peste 20 ani experiență în București și Ilfov.",
   keywords:
     "acoperisuri bucuresti, montaj tigla, reparatii acoperis, hidroizolatii, dulgherie, tigla metalica, tigla ceramica",
-  authors: [{ name: "Noi Te Acoperim" }],
+  authors: [{ name: "TOP Acoperis" }],
   openGraph: {
-    title: "Noi Te Acoperim - Servicii Complete Acoperișuri",
+    title: "TOP Acoperis- Servicii Complete Acoperișuri",
     description:
       "Specialiști în montaj și reparații acoperișuri. Disponibili 24/7.",
     locale: "ro_RO",
@@ -32,6 +33,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ro" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <head>
+        {/* Google Ads global site tag for AW-17616427813 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17616427813"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17616427813');
+          `}
+        </Script>
+      </head>
       <body className="font-sans antialiased">
         {children}
         <Analytics />
