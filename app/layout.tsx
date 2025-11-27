@@ -34,6 +34,11 @@ export default function RootLayout({
   return (
     <html lang="ro" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
+        {/* Search Console verification tag ensures ownership proof */}
+        <meta
+          name="google-site-verification"
+          content="-P4t_P9jXzfjGi8yWTq7CbWUew4RPb5OLF_FV88wtE4"
+        />
         {/* Google Ads global site tag for AW-17616427813 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17616427813"
