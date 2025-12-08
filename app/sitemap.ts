@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   // Ensure baseUrl matches exactly what's configured in Google Search Console
   // If you have www in Search Console, change this to "https://www.topacoperis.ro"
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://topacoperis.ro";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://top-acoperis.ro";
 
   // Normalize baseUrl - remove trailing slash if present
   const normalizedBaseUrl = baseUrl.replace(/\/$/, "");

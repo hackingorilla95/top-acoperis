@@ -7,9 +7,9 @@ import { Phone, AlertCircle, Clock, Shield, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Reparații Acoperișuri Urgență 24/7 București | Noi Te Acoperim",
+  title: "Reparații Acoperișuri Urgență 24/7 Romania | Noi Te Acoperim",
   description:
-    "Reparații urgente acoperișuri în București. Disponibili 24/7 pentru infiltrații, țigle sparte, jgheaburi defecte. Intervenție rapidă, echipă cu experiență!",
+    "Reparații urgente acoperișuri. Disponibili 24/7 pentru infiltrații, țigle sparte, jgheaburi defecte. Intervenție rapidă, echipă cu experiență!",
   keywords:
     "reparatii acoperis urgenta, infiltratii acoperis, tigla sparta, jgheaburi defecte, reparatii 24/7",
 };
@@ -247,7 +247,7 @@ export default function ReparatiiAcoperisuri() {
 
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {[
-                  "Intervenție în maxim 2 ore în București și Ilfov",
+                  "Intervenție în maxim 2 ore in Romania",
                   "Echipă mobilă cu toate echipamentele necesare",
                   "Evaluare gratuită și ofertă pe loc",
                   "Plată după finalizarea lucrării",

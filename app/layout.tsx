@@ -7,11 +7,11 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "TOP Acoperis - Servicii Complete Acoperișuri București",
+  title: "TOP Acoperis - Servicii Complete Acoperișuri",
   description:
-    "Servicii profesionale de montaj și reparații acoperișuri, hidroizolații, dulgherie. Disponibili 24/7 pentru urgențe. Peste 20 ani experiență în București și Ilfov.",
+    "Servicii profesionale de montaj și reparații acoperișuri, hidroizolații, dulgherie. Disponibili 24/7 pentru urgențe. Peste 20 ani experiență.",
   keywords:
-    "acoperisuri bucuresti, montaj tigla, reparatii acoperis, hidroizolatii, dulgherie, tigla metalica, tigla ceramica",
+    "acoperisuri satu mare, montaj tigla, reparatii acoperis, hidroizolatii, dulgherie, tigla metalica, tigla ceramica, reparatii acoperisuri, montaj acoperisuri, acoperisuri ieftine",
   authors: [{ name: "TOP Acoperis" }],
   openGraph: {
     title: "TOP Acoperis- Servicii Complete Acoperișuri",

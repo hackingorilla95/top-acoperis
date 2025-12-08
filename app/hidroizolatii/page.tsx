@@ -13,7 +13,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hidroizolații Terase & Acoperișuri București | Noi Te Acoperim",
+  title: "Hidroizolații Terase & Acoperișuri Romania | Noi Te Acoperim",
   description:
     "Hidroizolații profesionale pentru terase, acoperișuri plate, fundații. Materiale premium, garanție extinsă. Protejează-ți casa de infiltrații!",
   keywords:

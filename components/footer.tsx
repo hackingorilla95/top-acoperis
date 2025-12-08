@@ -77,15 +77,10 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Zone de Acoperire</h3>
             <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
-              <span>
-                reparatii si montaj acoperisuri București (toate sectoarele)
-              </span>
-              <span>reparatii si montaj acoperisuri Ilfov</span>
-              <span>reparatii si montaj acoperisuri Prahova</span>
-              <span>reparatii si montaj acoperisuri Dâmbovița</span>
-              <span>reparatii si montaj acoperisuri Giurgiu</span>
-              <span>reparatii si montaj acoperisuri Călărași</span>
-              <span>reparatii si montaj acoperisuri Constanta</span>
+              <span>reparatii si montaj acoperisuri</span>
+              <span>reparatii si montaj acoperisuri Satu Mare</span>
+              <span>reparatii si montaj acoperisuri Baia Mare</span>
+              <span>reparatii si montaj acoperisuri Cluj</span>
             </div>
           </div>
         </div>

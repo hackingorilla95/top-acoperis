@@ -20,11 +20,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Noi Te Acoperim - Servicii Complete Acoperișuri București | Montaj & Reparații",
+    "Noi Te Acoperim - Servicii Complete Acoperișuri Romania | Montaj & Reparații",
   description:
-    "Specialiști în montaj și reparații acoperișuri, hidroizolații, dulgherie. Disponibili 24/7 pentru urgențe. Peste 20 ani experiență în București și Ilfov. Evaluare gratuită!",
+    "Specialiști în montaj și reparații acoperișuri, hidroizolații, dulgherie. Disponibili 24/7 pentru urgențe. Peste 20 ani experiență. Evaluare gratuită!",
   keywords:
-    "acoperisuri bucuresti, montaj tigla metalica, reparatii acoperis urgenta, hidroizolatii terase, dulgherie, tigla ceramica, sistem pluvial",
+    "acoperisuri, montaj tigla metalica, reparatii acoperis urgenta, hidroizolatii terase, dulgherie, tigla ceramica, sistem pluvial",
 };
 
 export default function HomePage() {
@@ -62,8 +62,8 @@ export default function HomePage() {
           </h1>
 
           <p className="text-base sm:text-lg text-white/90 mb-8 max-w-xl mx-auto leading-relaxed">
-            Servicii complete în București. Peste 20 ani experiență, cele mai
-            bune soluții pentru acoperișul tău.
+            Servicii complete in Romania. Peste 20 ani experiență, cele mai bune
+            soluții pentru acoperișul tău.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4">
@@ -317,19 +317,19 @@ export default function HomePage() {
             {[
               {
                 name: "Popescu Adrian",
-                location: "Constanța",
+                location: "Satu-Mare",
                 quote:
                   "Foarte prompti și atenți la detalii. Acoperișul arată impecabil, recomand cu încredere!",
               },
               {
                 name: "Radu Elena",
-                location: "București",
+                location: "Baia Mare",
                 quote:
                   "Au lucrat rapid și curat. Mi-au explicat tot pas cu pas, oameni de nota 10!",
               },
               {
                 name: "Ionescu Daniel",
-                location: "Ploiești",
+                location: "Cluj-Napoca",
                 quote:
                   "Servicii excelente, preț corect și comunicare foarte bună. Cu siguranță voi apela din nou!",
               },

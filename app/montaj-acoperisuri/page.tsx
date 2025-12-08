@@ -7,12 +7,11 @@ import { Phone, CheckCircle2, Shield, Clock, Hammer } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Montaj Acoperișuri București | Țiglă Metalică & Ceramică | Noi Te Acoperim",
+  title: "Montaj Acoperișuri | Țiglă Metalică & Ceramică | Noi Te Acoperim",
   description:
-    "Montaj profesional acoperișuri în București. Țiglă metalică, ceramică, tablă. Echipă cu experiență, materiale premium, garanție extinsă. Evaluare gratuită!",
+    "Montaj profesional acoperișuri. Țiglă metalică, ceramică, tablă. Echipă cu experiență, materiale premium, garanție extinsă. Evaluare gratuită!",
   keywords:
-    "montaj acoperis bucuresti, tigla metalica, tigla ceramica, montaj tabla, acoperis nou",
+    "montaj acoperis, tigla metalica, tigla ceramica, montaj tabla, acoperis nou",
 };
 
 export default function MontajAcoperisuri() {
@@ -58,7 +57,7 @@ export default function MontajAcoperisuri() {
 
           <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed bg-white/80 rounded-xl px-2 py-1 backdrop-blur-[2px] shadow">
             Montăm orice tip de acoperiș cu materiale premium și garanție
-            extinsă. Peste 20 ani experiență în București și Ilfov.
+            extinsă. Peste 20 ani experiență în Romania.
           </p>
 
           <Button
