@@ -9,6 +9,13 @@ const VercelAnalytics = dynamic(
   { ssr: false }
 );
 
+declare global {
+  interface Window {
+    dataLayer: Array<Record<string, unknown>>;
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 type ConsentState = "unknown" | "accepted" | "declined";
 const STORAGE_KEY = "cookie-consent";
 
