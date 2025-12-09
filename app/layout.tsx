@@ -2,11 +2,14 @@ import type React from "react";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { Analytics } from "@vercel/analytics/next";
-import Script from "next/script";
 import "./globals.css";
+import { FloatingActions } from "@/components/floating-actions";
+import { ConsentManager } from "@/components/consent-manager";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://topacoperis.ro"
+  ),
   title: "TOP Acoperis - Servicii Complete Acoperișuri",
   description:
     "Servicii profesionale de montaj și reparații acoperișuri, hidroizolații, dulgherie. Disponibili 24/7 pentru urgențe. Peste 20 ani experiență.",
@@ -39,23 +42,13 @@ export default function RootLayout({
           name="google-site-verification"
           content="-P4t_P9jXzfjGi8yWTq7CbWUew4RPb5OLF_FV88wtE4"
         />
-        {/* Google Ads global site tag for AW-17616427813 */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17616427813"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17616427813');
-          `}
-        </Script>
       </head>
       <body className="font-sans antialiased">
         {children}
-        <Analytics />
+        {/* Persistent WhatsApp and Call buttons */}
+        <FloatingActions />
+        {/* Consent Manager controls analytics + ads scripts */}
+        <ConsentManager />
       </body>
     </html>
   );

@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
 
-export default function robots(): MetadataRoute.Robots {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://topacoperis.ro";
+// Must match the exact property domain used in Google Search Console
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://topacoperis.ro"
+).replace(/\/$/, "");
 
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
@@ -12,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }
 

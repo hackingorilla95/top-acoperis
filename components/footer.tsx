@@ -87,10 +87,19 @@ export function Footer() {
 
         <hr className="my-8 border-border" />
 
-        <div className="text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2025 TOP Acoperisuri. Toate drepturile rezervate.
-          </p>
+        <div className="flex flex-col items-center gap-3 text-center text-sm text-muted-foreground sm:flex-row sm:justify-between">
+          <p>© 2025 TOP Acoperisuri. Toate drepturile rezervate.</p>
+          <div className="flex flex-wrap justify-center gap-3 text-sm">
+            <Link href="/politica-cookie" className="hover:text-primary transition-colors">
+              Politica Cookie
+            </Link>
+            <Link href="/gdpr" className="hover:text-primary transition-colors">
+              GDPR / Protecția Datelor
+            </Link>
+            <Link href="/anpc" className="hover:text-primary transition-colors">
+              ANPC & SOL
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
