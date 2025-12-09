@@ -47,12 +47,14 @@ const fireCallConversion = (url?: string) => {
 
 export function ConsentManager() {
   const [consent, setConsent] = useState<ConsentState>("unknown");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const stored = typeof window !== "undefined" ? localStorage.getItem(STORAGE_KEY) : null;
     if (stored === "accepted" || stored === "declined") {
       setConsent(stored);
     }
+    setMounted(true);
   }, []);
 
   const applyConsent = (value: ConsentState) => {
@@ -69,6 +71,16 @@ export function ConsentManager() {
       }
     }
   };
+
+  const resetConsent = () => {
+    if (typeof window !== "undefined") {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+    setConsent("unknown");
+  };
+
+  // Avoid flicker on first render (hydration)
+  if (!mounted) return null;
 
   return (
     <>
@@ -121,6 +133,16 @@ export function ConsentManager() {
             </div>
           </div>
         </div>
+      )}
+
+      {consent !== "unknown" && (
+        <button
+          type="button"
+          onClick={resetConsent}
+          className="fixed bottom-4 left-4 z-40 rounded-full border border-gray-300 bg-white px-3 py-2 text-xs font-medium text-gray-700 shadow-3d hover:bg-gray-50"
+        >
+          Gestionează cookie-uri
+        </button>
       )}
     </>
   );
