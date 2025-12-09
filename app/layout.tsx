@@ -2,6 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import Script from "next/script";
 import "./globals.css";
 import { FloatingActions } from "@/components/floating-actions";
 import { ConsentManager } from "@/components/consent-manager";
@@ -41,6 +42,19 @@ export default function RootLayout({
         <meta
           name="google-site-verification"
           content="-P4t_P9jXzfjGi8yWTq7CbWUew4RPb5OLF_FV88wtE4"
+        />
+        {/* Google tag (gtag.js) - Base script loads in head for better detection */}
+        {/* Actual tracking only activates after user consent via ConsentManager */}
+        <Script
+          id="gtag-base"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            `,
+          }}
         />
       </head>
       <body className="font-sans antialiased">

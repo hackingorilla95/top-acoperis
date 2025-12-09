@@ -87,18 +87,19 @@ export function ConsentManager() {
       {/* Load tracking only after consent is accepted */}
       {consent === "accepted" && (
         <>
+          {/* Google tag (gtag.js) - loads the actual tracking script after consent */}
           <Script
             src="https://www.googletagmanager.com/gtag/js?id=AW-17616427813"
             strategy="afterInteractive"
           />
-          <Script id="google-ads" strategy="afterInteractive">
+          <Script id="google-ads-config" strategy="afterInteractive">
             {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-17616427813');
+              if (typeof window.gtag === 'function') {
+                gtag('config', 'AW-17616427813');
+              }
             `}
           </Script>
+          {/* Conversion linker functionality is handled automatically by gtag.js */}
           <VercelAnalytics />
         </>
       )}

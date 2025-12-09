@@ -25,8 +25,16 @@ export function FloatingActions() {
           value: 1,
         });
       }
+      // Fire Google Ads call conversion for "Clic pentru apelare" action
+      if (channel === "call" && typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: "AW-17616427813/IJlTCLLn1M4bEKW2ldBB",
+          value: 25.0,
+          currency: "RON",
+        });
+      }
+      // Also call the report conversion function if available (for compatibility)
       if (channel === "call" && typeof window.gtag_report_conversion === "function") {
-        // Fire Google Ads call conversion if consent allowed gtag to load
         window.gtag_report_conversion();
       }
     }
