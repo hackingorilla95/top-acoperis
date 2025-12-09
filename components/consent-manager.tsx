@@ -13,11 +13,37 @@ declare global {
   interface Window {
     dataLayer: Array<Record<string, unknown>>;
     gtag?: (...args: unknown[]) => void;
+    gtag_report_conversion?: (url?: string) => boolean | void;
   }
 }
 
 type ConsentState = "unknown" | "accepted" | "declined";
 const STORAGE_KEY = "cookie-consent";
+const CONVERSION_CONFIG = {
+  sendTo: "AW-17616427813/IJlTCLLn1M4bEKW2ldBB",
+  value: 25.0,
+  currency: "RON",
+};
+
+const fireCallConversion = (url?: string) => {
+  if (typeof window === "undefined") return false;
+  const callback = () => {
+    if (typeof url !== "undefined") {
+      window.location.href = url;
+    }
+  };
+  if (typeof window.gtag === "function") {
+    window.gtag("event", "conversion", {
+      send_to: CONVERSION_CONFIG.sendTo,
+      value: CONVERSION_CONFIG.value,
+      currency: CONVERSION_CONFIG.currency,
+      event_callback: callback,
+    });
+  } else {
+    callback();
+  }
+  return false;
+};
 
 export function ConsentManager() {
   const [consent, setConsent] = useState<ConsentState>("unknown");
@@ -38,6 +64,9 @@ export function ConsentManager() {
         event: "consent_update",
         consent: value,
       });
+      if (value === "accepted") {
+        window.gtag_report_conversion = fireCallConversion;
+      }
     }
   };
 

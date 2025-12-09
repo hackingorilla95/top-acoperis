@@ -25,6 +25,10 @@ export function FloatingActions() {
           value: 1,
         });
       }
+      if (channel === "call" && typeof window.gtag_report_conversion === "function") {
+        // Fire Google Ads call conversion if consent allowed gtag to load
+        window.gtag_report_conversion();
+      }
     }
   };
 
