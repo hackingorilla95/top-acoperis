@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/reparatii-acoperisuri", priority: 0.9, changeFreq: "weekly" as const },
     { path: "/dulgherie", priority: 0.8, changeFreq: "monthly" as const },
     { path: "/hidroizolatii", priority: 0.8, changeFreq: "monthly" as const },
+    { path: "/portofoliu", priority: 0.8, changeFreq: "monthly" as const },
     { path: "/servicii/montaj-tigla-metalica", priority: 0.7, changeFreq: "monthly" as const },
     { path: "/politica-cookie", priority: 0.6, changeFreq: "yearly" as const },
     { path: "/gdpr", priority: 0.6, changeFreq: "yearly" as const },

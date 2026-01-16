@@ -14,6 +14,7 @@ import {
   Building2,
   Menu,
   X,
+  Image as ImageIcon,
 } from "lucide-react";
 
 export function Navbar() {
@@ -65,6 +66,11 @@ export function Navbar() {
       href: "/dulgherie",
       icon: Building2,
     },
+    {
+      name: "Portofoliu",
+      href: "/portofoliu",
+      icon: ImageIcon,
+    },
   ];
 
   const closeDrawer = () => {
@@ -88,7 +94,7 @@ export function Navbar() {
               : "shadow-md border-gray-200/40"
           )}
         >
-          <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+          <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 min-h-[4.5rem] py-2">
             {/* Logo */}
             <Link
               href="/"
@@ -110,16 +116,16 @@ export function Navbar() {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-1">
+            {/* Desktop Navigation - Larger to prevent overflow */}
+            <div className="hidden lg:flex items-center gap-1.5 flex-wrap">
               {mainNav.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-gray-700 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors whitespace-nowrap"
                 >
-                  <item.icon className="h-4 w-4" />
-                  <span>{item.name}</span>
+                  <item.icon className="h-4 w-4 flex-shrink-0" />
+                  <span className="whitespace-nowrap">{item.name}</span>
                 </Link>
               ))}
             </div>
@@ -235,8 +241,8 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Spacer */}
-      <div className="h-20" aria-hidden="true" />
+      {/* Spacer - Adjusted for larger navbar */}
+      <div className="h-24" aria-hidden="true" />
     </>
   );
 }
